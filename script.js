@@ -212,3 +212,131 @@ prompt("hello");
  }else{
   console.log(num ,"is not Multiple of 5");
  } 
+
+
+ //Day 3 
+ //Loops in JS
+
+ //FOR LOOP  : count from 1 to 5
+
+ for(let i=0; i<=5; i++){
+  console.log("The Number is :", i);
+ }
+
+ //calculate sum of 1 to 5
+ let sum = 0;
+ for(let i=1; i<=5; i++){
+  sum = sum + i;
+ } 
+ console.log("The sum is:", sum);
+ 
+ //WHILE LOOP  : count from 1 to 6
+ let i =1;
+ while(i<=6){
+  console.log("The number is :", i);
+  i++;
+ }
+
+//DO-WHILE LOOP : count from 1 to 3
+let i=1;
+do{
+  console.log("The Number is:", i);
+  i++;
+}while(i<=3); //output: The Number is: 1
+
+//for-of Loop : helps to iterate over array and strings
+let str = "Hello! Muskan";
+for(let i of str){
+  console.log("i:", i);
+}
+
+//for-in Loop : helps to return a key of an object 
+let student={
+  name : "muskan",
+  age : 20,
+  CGPA : 8.9,
+};
+for(let i in student){
+  console.log(i);
+}
+//key with value 
+let student={
+  name : "muskan",
+  age : 20,
+  CGPA : 8.9,
+};
+for(let key in student){
+  console.log("key =", key , " value =", student[key]);
+}
+
+//PRACTICE :
+//Print all even number from 1 to 100
+
+for(let num=1; num<=100; num++){
+  if(num % 2===0){
+    console.log("The Number =", num);
+  }
+}
+
+//create a game where you start any random game number . Ask the user to keep guessing the game number until the user enter correct value.
+
+let gameNum = 45;
+let userNum = prompt("Guess the Game Number:");
+while(userNum != gameNum){
+  userNum = prompt("Wrong Number , Guess Again");
+}
+console.log("Congratulations . You Guess Right");
+
+//STRINGS: 
+//properties: 
+//string length use : str.length 
+let str = "Hello!";
+console.log(str[2]); // output : l
+
+//Template literals: the way for writting a string with variable/expression using ${expression/variable}.
+//using Variable:-
+let obj = {
+  item : "pen",
+  price : 10
+};
+let output = `The cost of ${obj.item} is ${obj.price} rupees`;
+console.log(output);
+
+//using expression:-
+let num = `The num is ${2+6}`;
+console.log(num);
+
+//String methods: 
+//str.toUpperCase()
+let str = "muskan";
+console.log(str.toUpperCase());
+
+//str.toLowerCase()
+let str = "MUSKAN";
+console.log(str.toLowerCase());
+
+//str.trim() :- remove whitespaces of starting and ending 
+let str = "      Helllo Muskan      ";
+console.log(str.trim());
+
+//str.slice(start, end) :- return parts of string, ending value non-inclusive
+let str = "muskan";
+console.log(str.slice(0,3)); //output mus
+
+//concat():- join str2 with str1
+let str1= "hello";
+let str2= "muskan";
+let result = str1.concat(str2);
+console.log(result);
+
+//str.replace(searchVal , newVal):- to replace old value with new value
+let str = "hello";
+console,log(str.replace(h,y)); //output: yello
+
+//str.charAt(index):- to find character index
+let str ="I love JS";
+console.log(str.charAt(0)); //output I
+
+
+
+
