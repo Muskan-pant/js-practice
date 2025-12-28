@@ -338,5 +338,97 @@ let str ="I love JS";
 console.log(str.charAt(0)); //output I
 
 
+//DAY 4 
+//ARRAYS
+
+let marks = [45,87,100,63];
+console.log(marks);
+console.log(marks.length);  // .length is a property to find length
+
+let marks = [45,87,100,63];
+marks[1] = 60; //can change value using index
+console.log(marks); 
 
 
+//Print all elements of an array (LOOPING OVER AN ARRAY)
+//for loop
+let colors =[ "blue", "pink", "yellow", "gray"];
+for(let i=0; i<colors.length; i++){
+  console.log(colors[i]);
+}
+
+//for of loop :- generally used for array
+let colors =[ "blue", "pink", "yellow", "gray"];
+for(let color of colors){
+  console.log(color);
+}
+
+//print all elements in upper case using for- of loop:-
+let cities =[ "delhi", "mumbai", "pune", "gurgaon"];
+for(let city of cities){
+  console.log(city.toUpperCase());
+}
+
+//PRACTICE:- 
+
+//For a given array with marks of students->[85,97,47,89,50]. Find the average of marks of entire class.
+let scores =[85,97,47,89,50];
+let sum = 0;
+for(let score of scores){
+  sum += score;
+}
+let avg = sum/scores.length; 
+console.log(`Average scores of class =  ${avg}`);  //template literals use to print output
+
+//For a given array with the prices of 5 items [200, 350, 900, 450]. All items have 10% OFF on them.Change the array to store the final price after applying offer.
+
+let items = [200, 350, 900, 450];
+for(let i=0; i<items.length; i++){
+  let offer = items[i] / 10;
+  items[i] -= offer;
+}
+console.log(items);
+
+//Arrays Methods:- 
+//push() :- add to end 
+let fruits = ["apple", "orange", "mango", "grapes"];
+fruits.push("banana");
+console.log(fruits);
+
+//pop() :- delete from end and return
+let fruits = ["apple", "orange", "mango", "grapes"];
+let deItem = fruits.pop();
+console.log(fruits);
+console.log("deleted item =", deItem);
+
+//toString() :- convert array to string
+let country = ["india", "america", "pakistan", "russia"];
+console.log(country.toString());
+
+//concat() :- joins multiple arrays & returns result
+let healthyFood = ["greenVegies", "chappati", "pulses"];
+let fastFood = ["pizza", "burger", "pasta"];
+let foodItems = healthyFood.concat(fastFood);
+console.log(foodItems);
+
+//unshift() :- add to start
+ let fastFood = ["pizza", "burger", "pasta"];
+ fastFood.unshift("momos");
+ console.log(fastFood);
+
+ //shift() :- delete from start and returns
+ let fastFood = ["pizza", "burger", "pasta"];
+ let val = fastFood.shift();
+ console.log("deleted =", val);
+
+ //slice() :- returns a piece of an array
+ //slice(startIdx, endIdx) 
+ let fastFood = ["pizza", "burger", "pasta", "noodles", "fries"];
+ console.log(fastFood.slice(1,3));
+
+ //splice() :- change original array(add, remove , replace)
+ //Splice(startIdx, delCount, newEl1....)
+ let numbers = [10,20,30,40,50,60,70];
+ numbers.splice(0,2,100,500);
+
+ 
