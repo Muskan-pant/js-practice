@@ -432,3 +432,181 @@ console.log(foodItems);
  numbers.splice(0,2,100,500);
 
  
+
+ //REVISE JS CONCEPTS:-
+
+ //variables & data-types:-
+
+ //1. Declare a variable name and store your name.
+ //2. Declare a variable age and store your age.
+ //3. Create a variable isStudent and store true or false.
+ //4. Print the type of each variable using typeof.
+ //5. Change the value of age and print it again.
+
+ let userName = "muskan";
+ console.log(typeof(userName));
+ let age = 20;
+ console.log(typeof(age));
+ age += age;
+ console.log(age);
+ let isStudent = true;
+ console.log(typeof(isStudent));
+
+ //operators:-
+
+  //1. Add two numbers and print the result.
+ //2. Subtract, multiply, and divide two numbers.
+ //3. Check if 10 > 5 and print the result.
+ //4. Check if 5 == "5" and 5 === "5".
+ //5. Use logical AND (&&) to check:--
+ // age > 18 and isStudent is true.
+
+ // 1 & 2. 
+ let a = 10;
+ let b = 5;
+let sum = a + b;
+let subtract = a - b;
+let multiply  = a * b;
+let divide = a / b;
+console.log("sum =", sum);
+console.log("subtract =", subtract);
+console.log("multiply =", multiply);
+console.log("divide =", divide);
+
+// 3. 
+let x = 10;
+let y = 5;
+let greator = x > y ;
+console.log(greator); //true
+
+// 4. 
+let a = 5;
+let b = "5";
+let looseChecks = 5 =="5"; // true (value only)
+console.log(looseChecks);
+let strictChecks = 5 ==="5"; //false (type + value)
+console.log(strictChecks);
+
+// 5. 
+let age = 20;
+let isStudent = true;
+let canApply = age >= 18 && isStudent;
+console.log(canApply);
+
+//conditionals :-
+
+ //1. Check if a number is positive or negative.
+ //2. Check if a person is eligible to vote (age ≥ 18).
+ //3. Check if a number is even or odd.
+ //4. Print "Pass" if marks ≥ 40, else "Fail".
+ //5. Use else if to check grade:--
+ // a.)  ≥ 90 → A
+ // b.) ≥ 75 → B
+ // c.) else → C
+
+ // 1. 
+ let num = 10 ;
+ if(num > 0){
+  console.log("positive");
+ }else{
+  console.log("negative");
+ }
+
+ // 2. 
+ let age = 20;
+ let result = age >= 18 ? "Adult" : "Child";
+ console.log(result);
+
+ // 3. 
+ if(num % 2 === 0){
+  console.log("even number");
+ }else{
+  console.log("odd");
+ }
+
+ // 4. 
+ let marks = 50 ;
+ if(marks >= 40){
+  console.log("Pass");
+ }else{
+  console.log("fail");
+ }
+
+ // 5.
+ let score = 85;
+ if(score >= 90){
+  console.log("Grade A");
+ }else if(score >= 75 ){
+  console.log("Grade B");
+ }else{
+  console.log("Grade C");
+ }
+
+//Looping Statements :--
+
+//1. Print numbers from 1 to 5 using for loop.
+//2. Print numbers from 5 to 1.
+//3. Print even numbers between 1 to 10.
+//4. Use while loop to print numbers from 1 to 3.
+//5. Loop through an array and print each value.
+
+// 1. 
+let num = 5 ;
+for(let i = 1; i <= num; i++){
+  console.log("The Number =", i);
+}
+
+// 2. 
+for(let i = 5; i >=1; i--){
+  console.log("The Number =", i);
+}
+ 
+// 3.
+for(let num = 1; num<=10; num++){
+  if(num % 2 === 0){
+    console.log("Even Number =", num);
+  }
+}
+
+// 4. 
+let i = 1;
+while(i <= 3){
+  console.log("The Number =", i);
+  i++;
+}
+
+// 5. 
+let colors = ["blue", "pink", "yellow", "gray", "black"];
+for(let color of colors){
+console.log(color);
+}
+
+//Strings :--
+
+//1. Create a string "JavaScript".
+//2. Print its length.
+//3. Convert it to uppercase.
+//4. Check if the string contains "Script".
+//5. Print the first 4 characters of the string.
+
+let str = "JavaScript";   
+console.log(str.length);  //output :- 10
+console.log(str.toUpperCase()); //output:- JAVASCRIPT
+console.log(str.includes("Script")); //output:- true
+console.log(str.slice(0,4)); //output:- java
+
+//Arrays:--
+
+//1. Create an array of 5 numbers.
+//2. Print the first and last element.
+//3. Add a new element at the end.
+//4. Remove the last element.
+//5. Loop through the array and print each element.
+
+let num = [33, 78, 40, 23, 98];
+console.log(num[0],[4]);
+console.log(num.push(100));
+console.log(num.pop());
+for(let el of num){
+  console.log(el);
+}
