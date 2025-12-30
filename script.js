@@ -610,3 +610,47 @@ console.log(num.pop());
 for(let el of num){
   console.log(el);
 }
+
+
+//DAY - 5:-
+//Array Methods
+
+//map():- create new array with the result of some operations.The value its callback returns are used to form new array.
+//  arr.map(callbackFnx(value, index, array))
+let nums = [34, 67, 89, 22,50];
+let newArr = nums.map((val) =>{
+  return val;
+});
+console.log(newArr);
+
+//value square
+let nums = [34, 67, 89, 22,50];
+let newArr = nums.map((val) =>{
+  return val * val;
+});
+console.log(newArr);
+
+//filter() :- create new array of elements that gives true for a condition/filter.
+//eg :- all even elements 
+let arr = [23, 67,44,84,93];
+let evenEl = arr.filter((val) =>{
+  return val % 2 === 0;
+});
+console.log(evenEl);
+
+//find values that are greater than 10 .
+let arr = [23, 2, 10, 67,44,84,93];
+let evenEl = arr.filter((val) =>{
+  return val > 10;
+});
+console.log(evenEl);
+
+//reduce():- arr.reduce((res , currentVal) => {} );
+// performs some operations and reduces the array to a single value.it returns that single value.
+const arr =[1,2,3,4,5];
+const output = arr.reduce((res, currentVal) => {
+  return res + currentVal;
+});
+console.log(output); //15 
+
+
