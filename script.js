@@ -654,3 +654,68 @@ const output = arr.reduce((res, currentVal) => {
 console.log(output); //15 
 
 
+//DAY - 6
+//Function:--
+function myFunc(){
+  console.log("hello");
+}
+myFunc();
+
+//input depends function:-
+function myFunc(msg){ //parameter -> input
+  console.log(msg);
+}
+myFunc("I love JS"); //arguments
+
+//pass multiple arguments:-
+function myFunc(msg, n){
+  console.log(msg + n);
+}
+myFunc("I love JS" ,  "HTML");
+
+//function -> 2 numbers sum
+function myFunc(x , y){
+  //local variables
+  console.log(x + y);
+}
+myFunc(10 , 4); //output 14
+
+//Arrow function:- compact way of writing a function. Used in Modern JS.
+const arrowMul = (x , y) => {
+  console.log(x * y);
+};
+arrowMul(10 , 4);
+
+//with parameter arrow function work:-
+let sayHello = () => {
+  console.log("Hi! Muskan");
+};
+
+//PRACTICE Q :-
+//create a function using the function keyword that takes a string as a arguments & return the number of vowels in the string.
+function countVowels(str){
+  let count = 0;
+  for(const char of str){
+    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u" ){
+      count++;
+    }
+  }
+  console.log(count);
+};
+countVowels("Muskan Pant"); //output 3
+
+//create arrow function to perform same task:-
+ const countVow =(str) => {
+  let count = 0;
+  for(const char of str){
+    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u" ){
+      count++;
+    }
+  }
+  console.log(count);
+};
+countVow("Muskan Pant"); //3 
+
+
+
+
