@@ -717,5 +717,39 @@ countVowels("Muskan Pant"); //output 3
 countVow("Muskan Pant"); //3 
 
 
+//PRACTICE JS FUNCTION QUESTIONS:---
+//create function named sayHi that prints: Hi, JavaScript!
+function sayHi(){
+  console.log("Hi, JavaScript!");
+};
+sayHi();
 
+//Add two numbers that returns the sum of two numbers.
+function addNum(a , b){
+let sum = a + b;
+ return sum; 
+}
+console.log(addNum(10 , 5));
+
+//Find square that returns the square of a number.
+function square(num){
+  return num * num;
+};
+console.log(square(4));
+
+//Check even or odd
+function checkEvenOdd(num){
+  if(num % 2 === 0){
+    console.log("Even");
+  }else{
+    console.log("Odd");
+  }
+};
+checkEvenOdd(6);
+
+//print name and age
+function printDetails(name , age){
+  console.log("Name :" , name , "Age :", age);
+};
+printDetails("Muskan" , 20);
 
