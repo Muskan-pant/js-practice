@@ -753,3 +753,19 @@ function printDetails(name , age){
 };
 printDetails("Muskan" , 20);
 
+
+
+//DAY -7 :-- JS DOM
+
+//DOM Manipulation :-- selecting with id 
+let heading = document.getElementById("heading");
+console.dir(heading); //dir used because this is an  object 
+
+//selecting with class
+let section = document.getElementsByClassName("section");
+console.dir(section);
+console.log(section);
+
+//secting with tag
+let buttons= document.getElementsByTagName("button");
+console.dir(buttons);
