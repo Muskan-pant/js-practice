@@ -769,3 +769,13 @@ console.log(section);
 //secting with tag
 let buttons= document.getElementsByTagName("button");
 console.dir(buttons);
+
+
+//Query Selector :- return node list
+//document.querySelector("myId / myClass /tag")  :-- return first element
+let elements = document.querySelector("id");
+console.dir(elements);
+
+//dovcument.querySelectorAll("myId / myClass /tag") :--returns a nodeList
+let allEl = document.querySelectorAll("class");
+console.dir(allEl);
