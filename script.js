@@ -777,5 +777,22 @@ let elements = document.querySelector("id");
 console.dir(elements);
 
 //dovcument.querySelectorAll("myId / myClass /tag") :--returns a nodeList
-let allEl = document.querySelectorAll("class");
+let allEl = document.querySelectorAll(".class");
 console.dir(allEl);
+
+//DOM PROPERTY (get , change, update) :-
+
+//tagName : returns tag for element nodes.
+let el = document.querySelector("id");
+console.dir(el); //h1 
+
+//innerText : return the text content of the element and all its children.
+let div = document.querySelector("div").children;
+console.dir(div);
+
+//innerHTML : returns the plain text or HTML Content in the element.
+let text = document.querySelector("div").innerHTML;
+console.dir(text);
+
+
+
