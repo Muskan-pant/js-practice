@@ -795,4 +795,20 @@ let text = document.querySelector("div").innerHTML;
 console.dir(text);
 
 
+//PRACTICE:-
+
+// Q1. Change Text using getElementById : -
+//Create a <p> with id msg
+//Using JS, change its text to "Hello DOM!"
+let msgg = document.getElementById("msg").innerText ="Hello DOM!";
+console.dir(msgg);
+
+// Q2. Change Color using querySelector : -
+//Create a <h2>
+//Select it using querySelector
+//Change its text color to blue
+let color = document.querySelector("title").style.color ="blue";
+console.dir(dir);
+
+!"
 
