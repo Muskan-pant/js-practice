@@ -8,6 +8,10 @@
   font-size: small;
 }
 
-#color {
-  
+#box {
+  height: 100px;
+  width: 100px;
+  background-color: darkslateblue;
+  color: white;
+  border: 1px solid black;
 }

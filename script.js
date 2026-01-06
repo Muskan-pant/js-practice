@@ -810,5 +810,36 @@ console.dir(msgg);
 let color = document.querySelector("title").style.color ="blue";
 console.dir(dir);
 
-!"
+//DOM ATTRIBUTE :- 
+//getAttribute(attr) :- to get the attribute value.
+let div =  document.querySelector("div");
+console.log(div);
 
+let id = div.getAttribute("id");
+console.log(id);
+
+let para = document.querySelector("p");
+console.log(para);
+//setAttribute(attr, val) :-  to set the attribute the value
+let para = document.querySelector("p");
+console.log(para.setAttribute("class","newClass")); 
+
+//to change style value : node.style
+let div = document.querySelector("div");
+div.style.backgroundColor ="green";
+div.style.fontSize ="26px";
+div.innerText ="Hello!";
+
+//Insert Element (Add element) :- first create than add something
+let newBtn = document.createElement("button");
+newBtn.innerText ="Click me";
+console.log(newBtn);
+
+let div = document.querySelector("div");
+div.append(newBtn); //node.append(el) : adds at the end of node (inside)
+
+ div.prepend(newBtn); //node.prepend(el) : adds at the start of node (inside)
+
+ div.before(newBtn); //node.before(el) : adds before the node (outside)
+
+ div.after(newBtn); //node.after(el) : adds after the node (outside)
