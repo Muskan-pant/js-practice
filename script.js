@@ -1,4 +1,7 @@
 //DAY 1 
+
+const { createElement } = require("react");
+
 //how to print in JS
 console.log("Hello! Muskan ");
 console.log("I Like to Learn JS ");
@@ -843,3 +846,26 @@ div.append(newBtn); //node.append(el) : adds at the end of node (inside)
  div.before(newBtn); //node.before(el) : adds before the node (outside)
 
  div.after(newBtn); //node.after(el) : adds after the node (outside)
+
+//DELETE ELEMENT
+//node.remove() :- remove the node
+let para = querySelector("para");
+para.remove();
+
+//PRACTICE QUESTION:- 
+// Q1. Create a new button element. Give it text  "click me", background color of red & text color of white. Insert the button as the first element inside the body tag.(Do this work without using HTML )
+let btn = document.createElement("button");
+btn.innerText = "Click me";
+btn.style.backgroundColor = "red";
+btn.style.color ="white";
+
+document.querySelector("body").prepend(btn);
+
+
+//Create a <p> tag in HTML , give it a class and some styling . Now create a new class in CSS and try to append this class to the <p> element. (using class list )
+
+let paragraph = document.querySelector("p");
+paragraph.classList.add("newClass");
+
+//remove
+paragraph.classList.remove("newClass");
