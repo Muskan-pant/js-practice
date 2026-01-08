@@ -869,3 +869,47 @@ paragraph.classList.add("newClass");
 
 //remove
 paragraph.classList.remove("newClass");
+
+
+//JS - EVENTS :-
+//event handling : 
+let btn1 = document.querySelector("#btn1");
+btn1.onClick = () => {
+  console.log("btn1 was clicked");
+
+};
+
+let div = document.querySelector("div");
+div.onmouseover = () =>{
+  console.log("you are inside div");
+};
+
+//event object :- node.event = () =>{ handle here }
+let btn1 = document.querySelector("#btn1");
+btn1.onClick = (evt) => {
+  console.log(evt);
+  console.log(evt.type); //to print the type of evt 
+  console.log(evt.target);
+  console.log(evt.clientX, evt.clientY);
+};
+
+//event listeners (best way of event handling ):-
+
+//node.addEventListener( event , callback/handler);
+
+btn1.addEventListener("click", () =>{
+  console.log("button was clicked - handler 1");
+});
+
+btn1.addEventListener("click", () =>{
+  console.log("button was clicked - handler 2");
+});
+
+const handler3 = () =>{
+  console.log("button was clicked - handler 3");
+};
+btn1.addEventListener("click", handler3);
+
+//node.removeEventListener(event, callback); 
+//NOTE : the callback reference should be same to remove
+btn1.removeEventListener("click", handler3);
