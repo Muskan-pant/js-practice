@@ -913,3 +913,27 @@ btn1.addEventListener("click", handler3);
 //node.removeEventListener(event, callback); 
 //NOTE : the callback reference should be same to remove
 btn1.removeEventListener("click", handler3);
+
+//PRACTICE QUESTIONS:- 
+
+// Q1. Button Click Event
+//Create a button “Click Me”
+//When clicked, log "Button Clicked!" in console.
+
+let btn2 = document.querySelector("#btn2");
+let btnHandler = () => {
+  console.log("Button Clicked!");
+};
+btn2.addEventListener("click", btnHandler);
+
+// Q2. Change Text on Button Click
+//Create a <p> with text "Hello"
+//Create a button "Change Text"
+//On button click → change text to "Text Changed!"
+//Concept: click event + innerText
+let btn3 = document.querySelector("#changeBtn");
+let para = document.querySelector("#text");
+
+btn3.addEventListener("click", () => {
+  para.innerText = "Text Changed!";
+});
