@@ -952,3 +952,33 @@ if(currMode === "light"){
 }
 console.log(currMode);
 });
+
+
+//Classes & Objects :--
+
+//Prototype in JS  : object having special property called prototype.
+//we can set a prototype using __proto__ 
+
+//Direct way of creating objects.
+const student = {
+  fullName : "muskan", //object property - usually called state
+  marks : 94.4,  //object property
+  printMarks : function () {
+    console.log("marks =", this.marks); //using "this" we can access anything directly
+  }, //methods
+};
+
+//using __proto__
+const emp = {
+  tax() {
+    console.log("tax is 10%");
+  },
+};
+
+const rahul ={
+  salary : 20000,
+};
+
+rahul.__proto__ = emp; //when i want to inherit object function in another object , we can simply used it . It reduces the need of repeat of function.
+
+
