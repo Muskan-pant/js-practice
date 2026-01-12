@@ -982,3 +982,62 @@ const rahul ={
 rahul.__proto__ = emp; //when i want to inherit object function in another object , we can simply used it . It reduces the need of repeat of function.
 
 
+//classes in JS
+class toyotaCar{
+  constructor() {
+    console.log("creating new object");
+  }
+
+start() { //function
+  console.log("Start");
+}
+
+stop() {  //function
+  console.log("Stop");
+}
+
+setBrand(brand){
+  this.brandName = brand; //define a variable
+}
+
+}
+
+let fortuner = new toyotaCar(); //using "new" keyword creating object of class
+console.log(fortuner);
+let lexus = new toyotaCar();  
+lexus.setBrand("lexus");
+console.log(lexus);
+
+//Inheritance in JS
+//for inheritance using keyword "extends"
+class Parent {    //class 1
+ hello() {
+  console.log("hello");
+ }
+}
+
+class Child extends Parent {} //class 2 inherits class 1 
+ 
+//Another Example
+class Person {
+  eat() {
+    console.log("eat");
+  }
+
+  sleep() {
+    console.log("sleep");
+  }
+
+}
+
+class Engineer extends Person {  //class engineer also inherits the features of class person .
+  work() {
+    console.log("solve problems , build something");
+  }
+}
+
+let nehaObj = new Engineer(); //creating objects 
+nehaObj.eat();  //calling a function using object
+nehaObj.work();
+
+//NOTE : If Child & Parent have same method, child's method will be used.[this concept is known as Method Overriding]
