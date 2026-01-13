@@ -1041,3 +1041,37 @@ nehaObj.eat();  //calling a function using object
 nehaObj.work();
 
 //NOTE : If Child & Parent have same method, child's method will be used.[this concept is known as Method Overriding]
+
+
+//Super keyword :- used to calls the constructor of its parent class to access the parent's proprties and methods.
+
+class Emp {
+  constructor() {
+    console.log("enter parent constructor");
+    this.species = "hono sapiens";
+  }
+
+  eat() {
+    console.log("eat");
+  }
+}
+ 
+class Engineer extends Emp {
+ constructor(branch) {
+  console.log("enter child constructor");
+  super();  // to call parent class constructor
+  this.branch = branch;
+  console.log("exit child constructor");
+ }
+
+ work() {
+  console.log("solve problems , build something");
+ }
+};
+
+let engObj = new Engineer("chemical engg");
+
+//output :-  enter child constructor
+// enter parent constructor
+// exit child constructor 
+// Notes : -- that means first child class constructor work than parent class after done the work they come back in the child class and excutes the work after the super() keyword . 
