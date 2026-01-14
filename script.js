@@ -1075,3 +1075,24 @@ let engObj = new Engineer("chemical engg");
 // enter parent constructor
 // exit child constructor 
 // Notes : -- that means first child class constructor work than parent class after done the work they come back in the child class and excutes the work after the super() keyword . 
+
+
+//PRACTICE :- you are creating a website for your college .create a class User with two property ,name & email. it also has a method called viewData() that allow user to view website  data.
+
+let DATA = "secret information";
+class User {
+  constructor(name, email){
+    this.name = name;
+    this.email = email;
+  }
+
+  viewData() {
+ console.log("Data" , DATA);
+  }
+}
+
+let student1 = new User("muskan" , "abc@gmail.com");
+let student2 = new User("kanika" , "xyz@gmail.com");
+
+
+
