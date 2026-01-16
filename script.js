@@ -1122,3 +1122,21 @@ let student2 = new User("kanika" , "xyz@gmail.com");
 let admin1 = new Admin("admin", "admin@gmail.com");
 
 //in this admin having access to change data but user have not.
+
+// try-catch Block :-
+
+const a = 10;
+const b = 5;
+console.log("a =", a);
+console.log("b =", b);
+console.log("a + b =", a + b);
+console.log("a - b =", a - b);
+try{
+console.log("a * b =", a * c); //if you having doubt any line of code than this line put in the try block . If error occur catch block is used to catch these error.
+}catch(err){  //err is error object 
+  console.log(err);
+}
+console.log("a / b =", a / b); 
+
+
+
