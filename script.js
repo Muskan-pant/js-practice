@@ -1121,6 +1121,7 @@ let student2 = new User("kanika" , "xyz@gmail.com");
 
 let admin1 = new Admin("admin", "admin@gmail.com");
 
+
 //in this admin having access to change data but user have not.
 
 // Callbacks :- is a function passed as an argument to another function .
