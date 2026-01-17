@@ -1122,3 +1122,58 @@ let student2 = new User("kanika" , "xyz@gmail.com");
 let admin1 = new Admin("admin", "admin@gmail.com");
 
 //in this admin having access to change data but user have not.
+
+// Callbacks :- is a function passed as an argument to another function .
+const hello = () => {
+  console.log("hello");
+}
+setTimeout(hello , 3000); //after 3 sec hello is print on the screen.
+
+// Callback Hell :- nested callbacks stacked below one another forming a pyramid structure.(Pyramid of DOOM)
+function getData(dataId){
+  setTimeout( => {
+    console.local("data", dataId);
+  }, 2000); //2 sec
+}
+
+//when you want get many data one by one 
+ function getData(dataId , getNextData){
+  setTimeout( => {
+    console.local("data", dataId);
+    if(getNextData){
+       getNextData();
+    }
+  }, 2000); //2 sec
+}
+
+getData(10, () =>{
+  getData(3); //callback passing 
+});  // output :- after 2s data 10 and after 2s data 3 is print on the screen. so the data comes one by one.
+
+//We can passing many callbacks and get data one by one after 2s.
+
+function getData(dataId , getNextData){
+  setTimeout( => {
+    console.local("data", dataId);
+    if(getNextData){
+       getNextData();
+    }
+  }, 2000); //2 sec
+}
+
+// callback hell : it is difficult to understand because one callback under another callback and so on. This is nested callbacks.  
+getData(1, () =>{
+  console.log("data 2...");
+  getData(2, () =>{
+    console.log("data 3...");
+    getData(3, () => {
+      console.log("data 4...");
+      getData(4, () =>{
+        console.log("data 5...");
+        getData(5);
+      });
+    });
+  });
+}); //after 2s from data 1 to data 5 print on the screen.
+
+//callback hell is problem in js that's why promises comes.
