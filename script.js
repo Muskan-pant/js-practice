@@ -1138,5 +1138,58 @@ console.log("a * b =", a * c); //if you having doubt any line of code than this 
 }
 console.log("a / b =", a / b); 
 
+// callbacks :- is a function passed as an argument to another function.
+const hello = () => {
+  console.log("hello");
+};
+
+setTimeout(hello, 3000); // after 3 sec hello is print on the screen.
+
+// Callback Hell :- nested callbacks stacked below one another forming a pyramid structure. (Pyramid of DOOM)
+function getData(dataId) {
+  setTimeout(() => {
+    console.log("data", dataId);
+  }, 2000); // 2 sec
+}
+
+// when you want get many data one by one
+function getData(dataId, getNextData) {
+  setTimeout(() => {
+    console.log("data", dataId);
+    if (getNextData) {
+      getNextData();
+    }
+  }, 2000);//2s
+}
+
+getData(1 , () => {
+  console.log("data 2 ...");
+  getData(2); //passing callbacks 
+}); //data 1 after 2s data 2 occure on screen
+
+//some time you need many callbacks one after another :-
+function getData(dataId, getNextData) {
+  setTimeout(() => {
+    console.log("data", dataId);
+    if (getNextData) {
+      getNextData();
+    }
+  }, 2000); //2s
+}
+
+getData(1, () => {
+  console.log("data 2...");
+  getData(2, () => {
+    console.log("data 3...");
+    getData(3, () => {
+      console.log("data 4...");
+      getData(4);
+    });
+  });
+}); // after 2s data 1 occure and than after 2s data 2 occure and so on . 
+
+//This is very difficult to understand because one callbcaks another callbacks that's why it is called callback hell .
+//To resolve this callback hell problem in js Promise comes .
+
 
 
