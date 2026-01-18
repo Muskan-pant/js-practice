@@ -1191,5 +1191,63 @@ getData(1, () => {
 //This is very difficult to understand because one callbcaks another callbacks that's why it is called callback hell .
 //To resolve this callback hell problem in js Promise comes .
 
+// JS PROMISES :-
+//Promises is for "eventual" completion of task. It is an object in JS.
+let promise = new Promise( (resolve, reject) => { //function with 2 handlers 
+  console.log("I am a Promise");
+  resolve("success");
+});
+
+//Promise 3 state : 1. Pending State  2. Fulfilled State(resolve)  3. Rejected State
+
+//how to use promises ? 
+//If fulfilled :- promise.then((res) => {...})
+//If Rejected :- promise.catch((err) => {...})
+
+const getPromise = () =>{
+  return new Promise((resolve, reject) => {
+    console.log("I am a Promise");
+    resolve("success");
+  });
+};
+
+let promise = getPromise();
+promise.then((res) => {
+  console.log("Promise fullfilled");
+});
+
+//Promise chaining Concept :-
+function asyncFun() {
+  return new Promise((resolve,reject) => {
+    setTimeout( () => {
+console.log("data 1");
+resolve("success"); 
+    }, 2000);//2s
+  });
+}; 
+
+function asyncFun2() {
+  return new Promise((resolve,reject) => {
+    setTimeout( () => {
+console.log("data 2");
+resolve("success"); 
+    }, 3000);//2s
+  });
+}; 
+
+console.log("fetching data 1...");
+let p1 = asyncFun();
+p1.then((res) => {
+  console.log("res");
+  console.log("fetching data 2...");
+  let p2 = asyncFun2();
+  p2.then((res) => {
+    console.log(res);
+  });
+}); //after 2s data 1 fetching and after 2s data 2 fetching and result print on the screen .
+
+
+
+  
 
 
