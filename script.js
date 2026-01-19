@@ -1191,5 +1191,27 @@ getData(1, () => {
 //This is very difficult to understand because one callbcaks another callbacks that's why it is called callback hell .
 //To resolve this callback hell problem in js Promise comes .
 
+// JS Async Awaits :- always returns a promise.
+asyn function sayHello( {
+  console.log("hello");
+});
+
+//await pauses the execution of its surrounding its asyn function untill the promise is settled.
+function api() {
+return new Promise( (resolve,reject) => {
+  setTimeout( () => {
+console.log("weather data");
+resolve("success");
+  }, 2000);
+});
+}
+async function getWeatherData () {
+await api(); //1st call
+await api(); //2nd call
+};
+  
+getWeatherData(); //calling 
+
+
 
 
