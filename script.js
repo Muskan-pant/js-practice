@@ -1247,6 +1247,26 @@ p1.then((res) => {
 }); //after 2s data 1 fetching and after 2s data 2 fetching and result print on the screen .
 
 
+// JS ASYNC AWAIT :- always return a promise.
+async function sayHello() {
+  console.log("weather data");
+};
+// await :- pauses the execution of its surrounding async function untill the promise is settled.
+function api() {
+  return new Promise((resolve,reject) => {
+    setTimeout( () => {
+      console.log("data of weather");
+      resolve("success");
+    }, 2000);//2s
+  });
+}
+
+async function getWeatherData() {
+  await api(); // call 1st time
+  await api(); //call 2nd time
+};
+
+getWeatherData(); //calling a function 
 
   
 
