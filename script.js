@@ -1268,6 +1268,14 @@ async function getWeatherData() {
 
 getWeatherData(); //calling a function 
 
-  
+  // JS IIFE :- It is a function that is called immediately as soon as it is defined.
 
+(asyn function getAllData () {
+  console.log("getting data 1...");
+  await getData(1);
+  console.log("getteing data 2...");
+  await getData(2);
+  console.log("getting data 3...");
+  await getData(3);
+}) ();
 
