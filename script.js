@@ -1290,3 +1290,15 @@ const getFact = () => {
 
 getFact(); //calling a function
 
+//JSON ():- returns a second promise that resolves with the result of parsing the response body text as JSON.(input is JSON and output is JS object)
+const URL ='https://cat-fact.herokuapp.com/facts';
+
+const getFact = async () => {
+  console.log("getting data...");
+  let response = await fetch(URL);
+  console.log(response); //JSON format
+  let data = await response.json();
+  console.log(data); //this data is useable data
+};
+
+getFact(); // calling function
